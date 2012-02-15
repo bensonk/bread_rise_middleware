@@ -25,6 +25,8 @@ def handle_data(source):
           height_values.append(float(height))
           intensity_values.append(int(intensity))
         except ValueError as e: pass # Skip unparseable lines
+    if len(height_values) == 0 or len(intensity_values) == 0:
+      break
     post(mean(intensity_values), mean(height_values))
 
 if __name__ == "__main__":
