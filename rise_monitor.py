@@ -31,4 +31,6 @@ def handle_data(source):
 
 if __name__ == "__main__":
   import sys
-  handle_data(sys.stdin)
+  import serial
+  ser = serial.Serial("/dev/ttyACM0", 115200)
+  handle_data(ser)
