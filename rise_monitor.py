@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from urllib2 import urlopen
 from urllib import urlencode
-url = "http://10.42.0.108:3000/readings.json"
+url = "http://sourdough.heroku.com/readings.json"
 block_size = 120 # 1 minute at 0.5s sampling rate
 
 def mean(items):
