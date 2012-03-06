@@ -19,9 +19,10 @@ def handle_data(source):
     height_values, intensity_values = list(), list()
     for i in range(block_size):
       line = source.readline()
+      print "> {}".format(line.strip())
       if line.strip() != "":
-        intensity, height = line.split(',')
         try:
+          intensity, height = line.split(',')
           height_values.append(float(height))
           intensity_values.append(int(intensity))
         except ValueError as e: pass # Skip unparseable lines
